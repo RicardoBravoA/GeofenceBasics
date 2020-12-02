@@ -19,6 +19,10 @@
         android:keepScreenOn="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <!--
+        android:text="@{context.getString(viewModel.geofenceHintResourceId)}"
+        -->
+
         <TextView
             android:id="@+id/hintTextView"
             android:layout_width="0dp"
@@ -27,7 +31,7 @@
             android:layout_marginEnd="@dimen/horizontal_margin"
             android:layout_marginBottom="@dimen/vertical_margin"
             android:fontFamily="@font/della_respira"
-            android:text="@{context.getString(viewmodel.geofenceHintResourceId)}"
+            android:text="@{context.getString(viewModel.geofenceHintResourceId)}"
             android:textAlignment="center"
             android:textSize="@dimen/hint_text_size"
             android:textStyle="bold"
@@ -49,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:contentDescription="@string/android_map_description"
-            android:src="@{context.getDrawable(viewmodel.geofenceImageResourceId)}"
+            android:src="@{context.getDrawable(viewModel.geofenceImageResourceId)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

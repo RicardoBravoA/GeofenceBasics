@@ -53,7 +53,8 @@ class MainActivity : AppCompatActivity() {
                 this
             )
         ).get(MainViewModel::class.java)
-        binding.contentMain.viewModel = mainViewModel
+        binding.viewModel = mainViewModel
+//        binding.executePendingBindings()
         binding.lifecycleOwner = this
         geofencingClient = LocationServices.getGeofencingClient(this)
 
