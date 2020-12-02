@@ -24,7 +24,4 @@ fun errorMessage(context: Context, errorCode: Int): String {
     }
 }
 
-/**
- * Stores latitude and longitude information along with a hint to help user find the location.
- */
-data class LandmarkDataObject(val id: String, val hint: Int, val name: Int, val latLong: LatLng)
+
