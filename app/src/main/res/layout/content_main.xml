@@ -6,11 +6,12 @@
     <data>
 
         <variable
-            name="viewmodel"
+            name="viewModel"
             type="com.udacity.geofence.basics.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/vertical_margin"
