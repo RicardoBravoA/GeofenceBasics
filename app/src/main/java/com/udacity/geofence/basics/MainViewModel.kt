@@ -17,7 +17,8 @@ import com.udacity.geofence.basics.util.Constant
  * the Home action will cause the state to be saved, even if the game is terminated by Android in
  * the background.
  */
-class GeofenceViewModel(state: SavedStateHandle) : ViewModel() {
+
+class MainViewModel(state: SavedStateHandle) : ViewModel() {
     private val _geofenceIndex = state.getLiveData(Constant.GEOFENCE_INDEX_KEY, -1)
     private val _hintIndex = state.getLiveData(Constant.HINT_INDEX_KEY, 0)
     val geofenceIndex: LiveData<Int>
