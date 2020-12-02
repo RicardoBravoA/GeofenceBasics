@@ -54,4 +54,7 @@ internal object Constant {
     const val BACKGROUND_LOCATION_PERMISSION_INDEX = 1
     internal const val ACTION_GEOFENCE_EVENT =
         "MainActivity.treasureHunt.action.ACTION_GEOFENCE_EVENT"
+
+    const val HINT_INDEX_KEY = "hintIndex"
+    const val GEOFENCE_INDEX_KEY = "geofenceIndex"
 }
