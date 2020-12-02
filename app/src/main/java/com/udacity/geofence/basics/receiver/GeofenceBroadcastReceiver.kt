@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.gms.location.Geofence
 import com.google.android.gms.location.GeofencingEvent
 import com.udacity.geofence.basics.R
-import com.udacity.geofence.basics.util.GeofencingConstants
+import com.udacity.geofence.basics.util.Constant
 import com.udacity.geofence.basics.util.errorMessage
 import com.udacity.geofence.basics.util.sendGeofenceEnteredNotification
 
@@ -23,8 +23,10 @@ import com.udacity.geofence.basics.util.sendGeofenceEnteredNotification
  */
 class GeofenceBroadcastReceiver : BroadcastReceiver() {
 
+    private val TAG = "GeofenceReceiver"
+
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action == ACTION_GEOFENCE_EVENT) {
+        if (intent.action == Constant.ACTION_GEOFENCE_EVENT) {
             val geofencingEvent = GeofencingEvent.fromIntent(intent)
 
             if (geofencingEvent.hasError()) {
@@ -46,7 +48,7 @@ class GeofenceBroadcastReceiver : BroadcastReceiver() {
                 }
                 // Check geofence against the constants listed in GeofenceUtil.kt to see if the
                 // user has entered any of the locations we track for geofences.
-                val foundIndex = GeofencingConstants.LANDMARK_DATA.indexOfFirst {
+                val foundIndex = Constant.LANDMARK_DATA.indexOfFirst {
                     it.id == fenceId
                 }
 
@@ -68,5 +70,3 @@ class GeofenceBroadcastReceiver : BroadcastReceiver() {
         }
     }
 }
-
-private const val TAG = "GeofenceReceiver"

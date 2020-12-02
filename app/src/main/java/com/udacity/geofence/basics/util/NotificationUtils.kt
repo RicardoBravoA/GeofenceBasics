@@ -46,7 +46,7 @@ fun createChannel(context: Context) {
  */
 fun NotificationManager.sendGeofenceEnteredNotification(context: Context, foundIndex: Int) {
     val contentIntent = Intent(context, MainActivity::class.java)
-    contentIntent.putExtra(GeofencingConstants.EXTRA_GEOFENCE_INDEX, foundIndex)
+    contentIntent.putExtra(Constant.EXTRA_GEOFENCE_INDEX, foundIndex)
     val contentPendingIntent = PendingIntent.getActivity(
         context,
         NOTIFICATION_ID,
@@ -68,7 +68,7 @@ fun NotificationManager.sendGeofenceEnteredNotification(context: Context, foundI
         .setContentText(
             context.getString(
                 R.string.content_text,
-                context.getString(GeofencingConstants.LANDMARK_DATA[foundIndex].name)
+                context.getString(Constant.LANDMARK_DATA[foundIndex].name)
             )
         )
         .setPriority(NotificationCompat.PRIORITY_HIGH)

@@ -2,7 +2,6 @@ package com.udacity.geofence.basics.util
 
 import android.content.Context
 import com.google.android.gms.location.GeofenceStatusCodes
-import com.google.android.gms.maps.model.LatLng
 import com.udacity.geofence.basics.R
 
 /**
